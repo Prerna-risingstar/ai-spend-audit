@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { generateAudit } from "@/lib/audit-engine";
+import { Results } from "./results";
 
 const tools = [
     "ChatGPT",
@@ -27,6 +29,24 @@ export function SpendForm() {
     const [seats, setSeats] = useState("");
     const [teamSize, setTeamSize] = useState("");
     const [useCase, setUseCase] = useState("Coding");
+    const [results, setResults] = useState([]);
+
+    const handleGenerateAudit = () => {
+        const audit = generateAudit({
+            tools: [
+                {
+                    tool,
+                    plan,
+                    monthlySpend: Number(monthlySpend),
+                    seats: Number(seats),
+                },
+            ],
+            teamSize: Number(teamSize),
+            useCase,
+        });
+
+        setResults(audit);
+    };
 
     return (
         <div className="mt-16 w-full max-w-4xl rounded-3xl border border-zinc-800 bg-zinc-950/80 p-8 shadow-2xl backdrop-blur">
@@ -120,9 +140,10 @@ export function SpendForm() {
                 </div>
             </div>
 
-            <button className="mt-8 w-full rounded-xl bg-white py-4 font-semibold text-black transition hover:opacity-90">
+            <button onClick={handleGenerateAudit} className="mt-8 w-full rounded-xl bg-white py-4 font-semibold text-black transition hover:opacity-90">
                 Generate Free Audit
             </button>
+            {results.length > 0 && <Results results={results} />}
         </div>
     );
 }
