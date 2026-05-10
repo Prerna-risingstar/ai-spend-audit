@@ -14,7 +14,10 @@ export type AuditRequest = {
 export type AuditResult = {
     tool: string;
     currentSpend: number;
+    originalPlan: string;
+    seats: number;
     recommendedPlan: string;
     savings: number;
     reason: string;
-};
+    severity: "low" | "medium" | "high";
+};
