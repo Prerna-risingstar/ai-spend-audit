@@ -3,6 +3,7 @@ import { AuditResult } from "@/types/audit";
 import { useState, useEffect } from "react";
 import { DashboardAnalysis } from "./dashboard-analysis";
 import { TaskAdvisor } from "./task-advisor";
+import { AIInsightsPanel } from "./ai-insights-panel";
 
 type Props = {
     results: AuditResult[];
@@ -125,6 +126,9 @@ export function Results({ results }: Props) {
                         </p>
                     )}
                 </div>
+
+                {/* AI Insights Panel */}
+                <AIInsightsPanel results={results} />
 
                 {/* New Dashboard Analysis Section */}
                 <DashboardAnalysis results={results} />

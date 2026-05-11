@@ -1,6 +1,6 @@
 # User Interviews (USER_INTERVIEWS.md)
 
-## Interview 1: Vaishnavi (AIML STUDENT -CHATBOTS EXPERT)
+## Interview 1: Vaishnavi (AIML CSE STUDENT )
 * **Context**: Managing a team of 5; currently using ChatGPT Team and Jasper.
 * **Feedback**: "The 'Savings Roadmap' is the best part. I didn't realize we were paying for Jasper's SEO features that ChatGPT now has built-in. This tool just saved us $80/mo."
 * **Pain Point Identified**: Lack of visibility into which team members are actually using which tool.
@@ -12,7 +12,7 @@
 * **Pain Point Identified**: Wanted to see a comparison with open-source models (Llama 3) for inference savings.
 * **Action Taken**: Added a note in the 'Strategic Guidance' section about local LLM hosting for high-volume tasks.
 
-## Interview 3: Aryan (CS Student AIML)
+## Interview 3: Aryan (CS Student AIML ) 
 * **Context**: Using 4 different AI tools for coding and research.
 * **Feedback**: "I usually just pay the $20/mo without thinking. This audit showed me I could consolidate everything into Claude 3.5 Sonnet and save $40/mo. The 'Market Ticker' at the top made me feel like I was on a real trading platform."
 * **Pain Point Identified**: The form was a bit long on mobile.
